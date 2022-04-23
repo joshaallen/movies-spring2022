@@ -17,10 +17,13 @@ const App = () => {
       } 
     */
    const [currentMovie, setCurrentMovie] = useState(null);
+
+
       
     //const currentMovie = useState(null)[0];
     //const setCurrentMovie = useState(null)[1];
 
+    console.log(currentMovie);
 
     return (
         <div className="movie-container">
@@ -28,6 +31,7 @@ const App = () => {
             movies.map((movie) =>
             <>
                <MoviePreview
+               setCurrentMovie={setCurrentMovie}
                 movieToPreview={movie}
                />
             </>
