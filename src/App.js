@@ -7,25 +7,14 @@ const App = () => {
 
     return (
         <div>
-            {/*Comparing arrow function with old function*/}
+            {/*Added alt atribute to satisfy React warnings*/}
            {
             movies.map((movie) =>
             <>
                 <p>{movie.title}</p>
-                <img src={movie.posterUrl}/>
+                <img src={movie.posterUrl} alt={movie.title}/>
             </>
             )
-           }
-            {/*Implementing 'old way of writng function' in the map function*/}
-            {
-            movies.map(function(movie) {
-                return (
-                    <>
-                        <p>{movie.title}</p>
-                        <img src={movie.posterUrl}/>
-                    </>
-                )
-            })
            }
         </div>
     );
