@@ -7,11 +7,31 @@ const App = () => {
 
     return (
         <div>
-            {/*The following is looping over movie array and returning movie titles then looping over movie array and returning movie posters in the img tag*/}
+            {/*Using JSX fragments to handle adjacent JSX elements for the return array of the map function*/}
             {
-                movies.map((movie) => <p>{movie.title}</p>)
+                movies.map((movie) => 
+                <>
+                    <p>{movie.title}</p>
+                    <img src={movie.posterUrl}/>
+                    <p>{movie.rating}</p>
+                    <p>{movie.director}</p>
+                </>
+                   
+                )
             }
-            
+             {/*Other than using JSX elements we can use an HTML container (In this case div) to wrap the JSX elements to avoid error*/}
+            {
+                movies.map((movie) =>
+                <div>
+                     <p>{movie.title}</p>
+                    <img src={movie.posterUrl}/>
+                    <p>{movie.rating}</p>
+                    <p>{movie.director}</p>
+                </div>
+                   
+                )
+            }
+             {/*Looping through movie array and returning posters in an image tag*/}
              {
                movies.map((movie) => <img src={movie.posterUrl}/>)
              }
