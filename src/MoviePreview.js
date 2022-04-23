@@ -11,6 +11,7 @@ const {movieToPreview, setCurrentMovie} = props;
 //const moviesToPreview = props.moviesToPreview;
 //w.o. the arrow function () => bc we are passing a parameter 
 // the app would reload for each movie
+//reactEvents are written in camelCase
     return (
         <>
             <p>{movieToPreview.title}</p>
