@@ -19,7 +19,7 @@ const App = () => {
    const [currentMovie, setCurrentMovie] = useState(null);
 
 
-      
+    //this is array desctructuring
     //const currentMovie = useState(null)[0];
     //const setCurrentMovie = useState(null)[1];
 
@@ -37,6 +37,25 @@ const App = () => {
             </>
             )
            }
+            {/*Ternary operators are fancy bu simplifies if/else statements*/}
+            {/*check if currentMovie exists*/}
+            {/*if it does, show the <div> block */}
+            {/*if it does not, show the <p>  */}
+            {
+                currentMovie ?
+                <div>
+                <p>{currentMovie.title}</p>
+                <p>{currentMovie.description}</p>
+                <p>{currentMovie.rating}</p>
+                <p>{currentMovie.director}</p>
+                <p>{currentMovie.releaseYear}</p>
+               
+            </div>
+                :
+                <p>No movie selected</p>
+
+            }
+         
         </div>
     );
 }

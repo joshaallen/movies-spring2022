@@ -10,7 +10,8 @@ const {movieToPreview, setCurrentMovie} = props;
 //below this is the long way to destructure the above line
 //const moviesToPreview = props.moviesToPreview;
 //w.o. the arrow function () => bc we are passing a parameter 
-// the app would reload for each movie
+// the app would reload for each movie arrow functions behaves
+// like a anonymous function that wraps our named function so //it doesn't get called on run time
 //reactEvents are written in camelCase
     return (
         <>
