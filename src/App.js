@@ -29,12 +29,11 @@ const App = () => {
         <div className="movie-container">
            {
             movies.map((movie) =>
-            <div key={movie.director}>
                <MoviePreview
+               key={movie.title}
                setCurrentMovie={setCurrentMovie}
                 movieToPreview={movie}
                />
-            </div>
             )
            }
             {/*Ternary operators are fancy bu simplifies if/else statements*/}
