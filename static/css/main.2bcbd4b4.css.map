@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.2bcbd4b4.css","mappings":"AAAA,KACE,QAAS,CACT,SACF,CCHA,IAEI,WAAY,CADZ,WAEJ,CAEA,iBACI,YACJ","sources":["index.css","App.css"],"sourcesContent":["body {\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n\r\n","img {\r\n    width: 250px;\r\n    height: auto;\r\n}\r\n\r\n.movie-container {\r\n    display: flex;\r\n}"],"names":[],"sourceRoot":""}
