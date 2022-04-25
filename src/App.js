@@ -6,23 +6,22 @@ import MovieDetails from './MovieDetails';
 
 
 const App = () => {
-    //this line is the same as the next two
-    //you can do javascript here
-    //example using console.log
+   
     console.log("Hello");
-    /*
-      function useState(startingState)  {
-          //some logic goes here
-
-          return [variable, setVariable];
-      } 
-    */
+   
    const [currentMovie, setCurrentMovie] = useState(null);
 
-
-    //this is array desctructuring
-    //const currentMovie = useState(null)[0];
-    //const setCurrentMovie = useState(null)[1];
+   const clearCurrentMovie = () => {
+    setCurrentMovie(null);
+   }
+   /*
+   Transated to the old function way
+   function clearCurrentMovie() {
+    setCurrentMovie(null);
+   }
+   
+   
+   */
 
     console.log(currentMovie);
 
@@ -36,6 +35,9 @@ const App = () => {
                 movieToPreview={movie}
                />
             )
+           }
+           {
+               <button onClick={clearCurrentMovie}>Clear</button>
            }
            {/*<MovieDetails/> is also fine to use here*/}
             <MovieDetails

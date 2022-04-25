@@ -4,11 +4,7 @@ const MovieDetails = (props) => {
     const {currentMovie} = props;
     //equivalent to const currentMovie = props.currentMovie;
     return (
-        <>
-            {/*Ternary operators are fancy bu simplifies if/else statements*/}
-            {/*check if currentMovie exists*/}
-            {/*if it does, show the <div> block */}
-            {/*if it does not, show the <p>  */}
+        <div>
             {
                  currentMovie ?
                  <div>
@@ -24,7 +20,7 @@ const MovieDetails = (props) => {
                  <p>No movie selected</p>
             }
         
-        </>
+        </div>
 
 
     )
