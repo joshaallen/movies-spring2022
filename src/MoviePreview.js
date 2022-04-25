@@ -15,7 +15,10 @@ const updateMovieSelection = () => {
     return (
         <div>
             <p>{movieToPreview.title}</p>
-            <p>{clickCount}</p>
+            {/*String templating is done by the backtick(`) */}
+            {/*You can mix any sort of text and javascript varables with string templating */}
+            {/*When you want to reference a variable, use the variable name inside ${variableNameHere} */}
+            <p>{`clicked ${clickCount} number of times`}</p>
             <img src={movieToPreview.posterUrl} alt={movieToPreview.title} 
             onClick={updateMovieSelection}
             />
