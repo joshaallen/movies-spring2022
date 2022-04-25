@@ -29,12 +29,12 @@ const App = () => {
         <div className="movie-container">
            {
             movies.map((movie) =>
-            <>
+            <div key={movie.director}>
                <MoviePreview
                setCurrentMovie={setCurrentMovie}
                 movieToPreview={movie}
                />
-            </>
+            </div>
             )
            }
             {/*Ternary operators are fancy bu simplifies if/else statements*/}
@@ -44,13 +44,14 @@ const App = () => {
             {
                 currentMovie ?
                 <div>
-                <p>{currentMovie.title}</p>
-                <p>{currentMovie.description}</p>
-                <p>{currentMovie.rating}</p>
-                <p>{currentMovie.director}</p>
-                <p>{currentMovie.releaseYear}</p>
+                    <p>{JSON.stringify(currentMovie)}</p>
+                    <p>{currentMovie.title}</p>
+                    <p>{currentMovie.description}</p>
+                    <p>{currentMovie.rating}</p>
+                    <p>{currentMovie.director}</p>
+                    <p>{currentMovie.releaseYear}</p>
                
-            </div>
+                </div>
                 :
                 <p>No movie selected</p>
 
