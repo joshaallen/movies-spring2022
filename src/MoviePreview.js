@@ -14,12 +14,12 @@ const {movieToPreview, setCurrentMovie} = props;
 // like a anonymous function that wraps our named function so //it doesn't get called on run time
 //reactEvents are written in camelCase
     return (
-        <>
+        <div>
             <p>{movieToPreview.title}</p>
             <img src={movieToPreview.posterUrl} alt={movieToPreview.title} 
             onClick={() => setCurrentMovie(movieToPreview)}
             />
-        </>
+        </div>
         
     )
 }
